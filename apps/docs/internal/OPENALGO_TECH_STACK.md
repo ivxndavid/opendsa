@@ -1,4 +1,4 @@
-# OpenAlgo - Technology Stack
+# OpenDSA - Technology Stack
 
 > Comprehensive documentation of all technology choices and the rationale behind each decision.
 
@@ -21,7 +21,7 @@
 
 ## Overview
 
-The OpenAlgo tech stack is chosen based on the following criteria:
+The OpenDSA tech stack is chosen based on the following criteria:
 
 - **Industry Standard**: Widely adopted, well-documented technologies
 - **Developer Experience**: Fast iteration, good tooling, TypeScript support
@@ -127,9 +127,9 @@ const nextConfig = {
     ],
   },
   transpilePackages: [
-    '@openalgo/ui',
-    '@openalgo/visualizers',
-    '@openalgo/algorithms',
+    '@opendsa/ui',
+    '@opendsa/visualizers',
+    '@opendsa/algorithms',
   ],
 };
 
@@ -172,11 +172,11 @@ export default nextConfig;
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"],
-      "@openalgo/ui": ["../../packages/ui/src"],
-      "@openalgo/algorithms": ["../../packages/algorithms/src"],
-      "@openalgo/visualizers": ["../../packages/visualizers/src"],
-      "@openalgo/types": ["../../packages/types/src"],
-      "@openalgo/utils": ["../../packages/utils/src"]
+      "@opendsa/ui": ["../../packages/ui/src"],
+      "@opendsa/algorithms": ["../../packages/algorithms/src"],
+      "@opendsa/visualizers": ["../../packages/visualizers/src"],
+      "@opendsa/types": ["../../packages/types/src"],
+      "@opendsa/utils": ["../../packages/utils/src"]
     }
   }
 }
@@ -502,7 +502,7 @@ export default config;
 4. **Exit Animations**: `AnimatePresence`
 5. **Spring Physics**: Natural motion
 
-**Use Cases in OpenAlgo**:
+**Use Cases in OpenDSA**:
 ```typescript
 // Page transitions
 <motion.div
@@ -561,7 +561,7 @@ export default config;
 4. **Scales**: Map data to visual properties
 5. **Existing Knowledge**: Already used in current project
 
-**Use Cases in OpenAlgo**:
+**Use Cases in OpenDSA**:
 - Graph algorithms (BFS, DFS, Dijkstra)
 - Tree visualizations (BST, traversals)
 - Complex sorting visualizations (bars, with animations)
@@ -1031,7 +1031,7 @@ export default tseslint.config(
 
 ## Comparison with Current Stack
 
-| Aspect | Current (ds-algo-deck) | New (OpenAlgo) | Reason for Change |
+| Aspect | Current (ds-algo-deck) | New (OpenDSA) | Reason for Change |
 |--------|------------------------|----------------|-------------------|
 | **Framework** | React + Vite | Next.js 14 | SSR, SEO, file routing, Vercel integration |
 | **Language** | JavaScript | TypeScript | Type safety, better DX, documentation |
@@ -1050,7 +1050,7 @@ export default tseslint.config(
 
 ## Summary
 
-The OpenAlgo tech stack is carefully chosen to provide:
+The OpenDSA tech stack is carefully chosen to provide:
 
 1. **Modern Foundation**: Next.js + TypeScript + pnpm
 2. **Scalable Architecture**: Turborepo monorepo

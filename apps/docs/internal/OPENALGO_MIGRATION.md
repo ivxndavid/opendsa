@@ -1,6 +1,6 @@
-# OpenAlgo - Migration Guide
+# OpenDSA - Migration Guide
 
-> Step-by-step guide for migrating from ds-algo-deck (current project) to OpenAlgo (new project).
+> Step-by-step guide for migrating from ds-algo-deck (current project) to OpenDSA (new project).
 
 ## Table of Contents
 
@@ -31,7 +31,7 @@
 | **Routing** | React Router DOM |
 | **Deployment** | Netlify |
 
-### Target State (OpenAlgo)
+### Target State (OpenDSA)
 
 | Aspect | Details |
 |--------|---------|
@@ -53,7 +53,7 @@ flowchart LR
         OldUI[UI Components]
     end
 
-    subgraph New[OpenAlgo]
+    subgraph New[OpenDSA]
         NewAlgos[algorithms package]
         NewViz[visualizers package]
         NewUI[ui package]
@@ -74,7 +74,7 @@ flowchart LR
 ### Guiding Principles
 
 1. **Incremental Migration**: Migrate piece by piece, not all at once
-2. **Parallel Operation**: Keep ds-algo-deck running until OpenAlgo reaches feature parity
+2. **Parallel Operation**: Keep ds-algo-deck running until OpenDSA reaches feature parity
 3. **Test Early**: Write tests as you migrate
 4. **Document Changes**: Note any improvements or changes made during migration
 
@@ -134,8 +134,8 @@ Before starting the migration, ensure:
 
 ### Preparation
 
-- [ ] **Create GitHub organization**: `openalgo`
-- [ ] **Reserve domain**: `openalgo.dev` or alternative
+- [ ] **Create GitHub organization**: `opendsa`
+- [ ] **Reserve domain**: `opendsa.dev` or alternative
 - [ ] **Set up Vercel account**: Link to GitHub org
 - [ ] **Create Discord server**: For community
 - [ ] **Prepare announcement**: Blog post, social media
@@ -148,8 +148,8 @@ Before starting the migration, ensure:
 
 ```bash
 # Create new directory
-mkdir openalgo
-cd openalgo
+mkdir opendsa
+cd opendsa
 
 # Initialize git
 git init
@@ -203,7 +203,7 @@ EOF
 
 ```json
 {
-  "name": "openalgo",
+  "name": "opendsa",
   "private": true,
   "scripts": {
     "dev": "turbo dev",
@@ -215,7 +215,7 @@ EOF
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@openalgo/config": "workspace:*",
+    "@opendsa/config": "workspace:*",
     "husky": "^8.0.0",
     "lint-staged": "^15.0.0",
     "prettier": "^3.1.0",
@@ -280,7 +280,7 @@ jobs:
 git add .
 git commit -m "chore: initial repository setup"
 git branch -M main
-git remote add origin https://github.com/soloshun/openalgo.git
+git remote add origin https://github.com/soloshun/opendsa.git
 git push -u origin main
 
 # Create dev branch
@@ -302,7 +302,7 @@ git push -u origin dev
 
 ## Phase 2: Package Migration
 
-### 2.1 Types Package (`@openalgo/types`)
+### 2.1 Types Package (`@opendsa/types`)
 
 **Files to create**:
 
@@ -325,7 +325,7 @@ packages/types/
 - [ ] Create algorithm-specific types
 - [ ] Export all types
 
-### 2.2 Utils Package (`@openalgo/utils`)
+### 2.2 Utils Package (`@opendsa/utils`)
 
 **Migrate from current project**:
 
@@ -342,7 +342,7 @@ packages/types/
 - [ ] Write unit tests
 - [ ] Remove unused utilities
 
-### 2.3 Algorithms Package (`@openalgo/algorithms`)
+### 2.3 Algorithms Package (`@opendsa/algorithms`)
 
 **Migrate from current project**:
 
@@ -370,7 +370,7 @@ packages/types/
 - [ ] Write comprehensive tests
 - [ ] Add JSDoc documentation
 
-### 2.4 UI Package (`@openalgo/ui`)
+### 2.4 UI Package (`@opendsa/ui`)
 
 **Replace NextUI with shadcn/ui**:
 
@@ -402,7 +402,7 @@ packages/types/
 - [ ] Set up theme CSS variables
 - [ ] Create algorithm-specific color tokens
 
-### 2.5 Visualizers Package (`@openalgo/visualizers`)
+### 2.5 Visualizers Package (`@opendsa/visualizers`)
 
 **Migrate from current project**:
 
@@ -551,9 +551,9 @@ pnpm add nextra nextra-theme-docs
 
 | Package | Target Coverage |
 |---------|-----------------|
-| `@openalgo/algorithms` | 90%+ |
-| `@openalgo/utils` | 80%+ |
-| `@openalgo/visualizers` | 70%+ |
+| `@opendsa/algorithms` | 90%+ |
+| `@opendsa/utils` | 80%+ |
+| `@opendsa/visualizers` | 70%+ |
 
 **Tests to write**:
 
@@ -625,9 +625,9 @@ vercel env add NEXT_PUBLIC_APP_URL
 
 ```bash
 # Production
-NEXT_PUBLIC_APP_URL=https://app.openalgo.dev
-NEXT_PUBLIC_WEB_URL=https://openalgo.dev
-NEXT_PUBLIC_DOCS_URL=https://docs.openalgo.dev
+NEXT_PUBLIC_APP_URL=https://app.opendsa.dev
+NEXT_PUBLIC_WEB_URL=https://opendsa.dev
+NEXT_PUBLIC_DOCS_URL=https://docs.opendsa.dev
 ```
 
 ### 5.4 Deployment Checklist
@@ -697,7 +697,7 @@ vercel rollback <deployment-url>
 ### Keep ds-algo-deck Running
 
 - Maintain current Netlify deployment
-- Do not archive until OpenAlgo is stable
+- Do not archive until OpenDSA is stable
 - Monitor both projects during transition
 
 ---
@@ -731,11 +731,11 @@ Copy and use in GitHub Issues for tracking:
 - [ ] Create branch structure
 
 ### Phase 2: Package Migration
-- [ ] @openalgo/types
-- [ ] @openalgo/utils
-- [ ] @openalgo/algorithms
-- [ ] @openalgo/ui
-- [ ] @openalgo/visualizers
+- [ ] @opendsa/types
+- [ ] @opendsa/utils
+- [ ] @opendsa/algorithms
+- [ ] @opendsa/ui
+- [ ] @opendsa/visualizers
 
 ### Phase 3: Application Migration
 - [ ] apps/app (Main visualizer)

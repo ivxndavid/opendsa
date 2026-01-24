@@ -5,19 +5,19 @@ import 'nextra-theme-docs/style.css'
 
 export const metadata = {
   title: {
-    default: 'OpenAlgo Docs',
-    template: '%s | OpenAlgo Docs'
+    default: 'OpenDSA Docs',
+    template: '%s | OpenDSA Docs'
   },
-  description: 'OpenAlgo documentation'
+  description: 'OpenDSA documentation'
 }
 
 const navbar = (
   <Navbar
-    logo={<b>OpenAlgo</b>}
+    logo={<b>OpenDSA</b>}
   />
 )
 
-const footer = <Footer>{new Date().getFullYear()} © OpenAlgo.</Footer>
+const footer = <Footer>{new Date().getFullYear()} © OpenDSA.</Footer>
 
 export default async function RootLayout({ children }) {
   return (
@@ -28,7 +28,7 @@ export default async function RootLayout({ children }) {
           navbar={navbar}
           footer={footer}
           pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/solo-shun/openalgo/tree/dev/apps/docs"
+          docsRepositoryBase="https://github.com/solo-shun/opendsa/tree/dev/apps/docs"
         >
           {children}
         </Layout>
