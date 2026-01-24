@@ -1,4 +1,4 @@
-# OpenAlgo - Product Roadmap
+# OpenDSA - Product Roadmap
 
 > A phased approach to building the ultimate algorithm visualization platform.
 
@@ -17,7 +17,7 @@
 
 ## Vision
 
-**OpenAlgo** aims to be the go-to open-source platform for visualizing and learning data structures and algorithms. Our goal is to make algorithm education:
+**OpenDSA** aims to be the go-to open-source platform for visualizing and learning data structures and algorithms. Our goal is to make algorithm education:
 
 - **Visual**: See algorithms come to life
 - **Interactive**: Control and experiment with algorithms
@@ -30,7 +30,7 @@
 
 ```mermaid
 gantt
-    title OpenAlgo Development Roadmap
+    title OpenDSA Development Roadmap
     dateFormat YYYY-MM
     
     section Phase 1
@@ -77,13 +77,13 @@ gantt
   - Automated dependency updates (Dependabot)
 
 - [ ] **Core Packages**
-  - `@openalgo/types` - Shared TypeScript types
-  - `@openalgo/config` - Shared configurations
-  - `@openalgo/utils` - Utility functions
+  - `@opendsa/types` - Shared TypeScript types
+  - `@opendsa/config` - Shared configurations
+  - `@opendsa/utils` - Utility functions
 
 ### 1.2 UI Component Library
 
-- [ ] **Base Components** (`@openalgo/ui`)
+- [ ] **Base Components** (`@opendsa/ui`)
   - Button, Input, Slider
   - Card, Dialog, Popover
   - Dropdown, Select, Tabs
@@ -99,7 +99,7 @@ gantt
 
 ### 1.3 Animation Engine
 
-- [ ] **Core Engine** (`@openalgo/visualizers`)
+- [ ] **Core Engine** (`@opendsa/visualizers`)
   - Step-based animation system
   - Play/pause/reset controls
   - Step forward/backward
@@ -113,7 +113,7 @@ gantt
 
 ### 1.4 Initial Algorithms
 
-- [ ] **Sorting Algorithms** (`@openalgo/algorithms`)
+- [ ] **Sorting Algorithms** (`@opendsa/algorithms`)
   - Bubble Sort
   - Selection Sort
   - Insertion Sort
@@ -170,7 +170,7 @@ gantt
 
 ### 1.8 Launch Checklist
 
-- [ ] Domain setup (openalgo.dev)
+- [ ] Domain setup (opendsa.dev)
 - [ ] SEO configuration
 - [ ] Analytics setup
 - [ ] Error tracking (Sentry)

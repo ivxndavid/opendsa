@@ -1,5 +1,5 @@
 {
-  "name": "openalgo",
+  "name": "opendsa",
   "private": true,
   "version": "1.0.0",
   "description": "An open-source, interactive platform for visualizing data structures and algorithms.",
@@ -14,7 +14,7 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@openalgo/config": "workspace:*",
+    "@opendsa/config": "workspace:*",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "prettier": "^3.8.0",

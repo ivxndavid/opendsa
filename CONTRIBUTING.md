@@ -1,6 +1,6 @@
-# Contributing to OpenAlgo
+# Contributing to OpenDSA
 
-Thank you for your interest in contributing to OpenAlgo! This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to OpenDSA! This document provides guidelines and instructions for contributing to the project.
 
 ## Table of Contents
 
@@ -46,11 +46,11 @@ Before you begin, ensure you have the following installed:
 # 1. Fork the repository on GitHub
 
 # 2. Clone your fork
-git clone https://github.com/soloshun/openalgo.git
-cd openalgo
+git clone https://github.com/soloshun/opendsa.git
+cd opendsa
 
 # 3. Add upstream remote
-git remote add upstream https://github.com/soloshun/openalgo.git
+git remote add upstream https://github.com/soloshun/opendsa.git
 
 # 4. Install dependencies
 pnpm install
@@ -77,9 +77,9 @@ pnpm install
 pnpm dev
 
 # Run specific app
-pnpm dev --filter=@openalgo/app
-pnpm dev --filter=@openalgo/web
-pnpm dev --filter=@openalgo/docs
+pnpm dev --filter=@opendsa/app
+pnpm dev --filter=@opendsa/web
+pnpm dev --filter=@opendsa/docs
 ```
 
 ### Building
@@ -89,7 +89,7 @@ pnpm dev --filter=@openalgo/docs
 pnpm build
 
 # Build specific package
-pnpm build --filter=@openalgo/algorithms
+pnpm build --filter=@opendsa/algorithms
 ```
 
 ### Testing
@@ -102,7 +102,7 @@ pnpm test
 pnpm test:watch
 
 # Run tests for specific package
-pnpm test --filter=@openalgo/algorithms
+pnpm test --filter=@opendsa/algorithms
 
 # Run E2E tests
 pnpm test:e2e
@@ -129,7 +129,7 @@ pnpm type-check
 ## Project Structure
 
 ```
-openalgo/
+opendsa/
 ├── apps/
 │   ├── web/              # Marketing website
 │   ├── app/              # Main visualizer application
@@ -152,14 +152,14 @@ openalgo/
 
 | Package | Description | Key Files |
 |---------|-------------|-----------|
-| `@openalgo/app` | Main visualizer app | `app/`, `components/` |
-| `@openalgo/web` | Marketing website | `app/`, `components/` |
-| `@openalgo/docs` | Documentation | `pages/` |
-| `@openalgo/ui` | UI components | `src/components/` |
-| `@openalgo/algorithms` | Pure algorithms | `src/sorting/`, `src/searching/` |
-| `@openalgo/visualizers` | Visualizer components | `src/engine/`, `src/sorting/` |
-| `@openalgo/types` | TypeScript types | `src/*.types.ts` |
-| `@openalgo/utils` | Utility functions | `src/` |
+| `@opendsa/app` | Main visualizer app | `app/`, `components/` |
+| `@opendsa/web` | Marketing website | `app/`, `components/` |
+| `@opendsa/docs` | Documentation | `pages/` |
+| `@opendsa/ui` | UI components | `src/components/` |
+| `@opendsa/algorithms` | Pure algorithms | `src/sorting/`, `src/searching/` |
+| `@opendsa/visualizers` | Visualizer components | `src/engine/`, `src/sorting/` |
+| `@opendsa/types` | TypeScript types | `src/*.types.ts` |
+| `@opendsa/utils` | Utility functions | `src/` |
 
 ---
 
@@ -232,7 +232,7 @@ Create the pure algorithm in `packages/algorithms`:
 ```typescript
 // packages/algorithms/src/sorting/insertion-sort.ts
 
-import type { AnimationStep } from '@openalgo/types';
+import type { AnimationStep } from '@opendsa/types';
 
 /**
  * Insertion Sort Algorithm
@@ -394,8 +394,8 @@ describe('insertionSortSteps', () => {
 
 import { useRef, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { VisualizerProps, AnimationStep } from '@openalgo/types';
-import { cn } from '@openalgo/utils';
+import type { VisualizerProps, AnimationStep } from '@opendsa/types';
+import { cn } from '@opendsa/utils';
 
 interface InsertionSortProps extends VisualizerProps<number[]> {}
 
@@ -495,7 +495,7 @@ import {
   Input,
   Card,
   CardContent,
-} from '@openalgo/ui';
+} from '@opendsa/ui';
 import { 
   Play, 
   Pause, 
@@ -504,7 +504,7 @@ import {
   SkipForward,
   Shuffle,
 } from 'lucide-react';
-import type { ControlsProps } from '@openalgo/types';
+import type { ControlsProps } from '@opendsa/types';
 
 export function InsertionSortControls({
   onPlay,
@@ -620,8 +620,8 @@ export function InsertionSortControls({
 ```typescript
 // packages/visualizers/src/sorting/insertion-sort-plugin.ts
 
-import type { VisualizerPlugin } from '@openalgo/types';
-import { insertionSortSteps } from '@openalgo/algorithms';
+import type { VisualizerPlugin } from '@opendsa/types';
+import { insertionSortSteps } from '@opendsa/algorithms';
 import { InsertionSortVisualizer } from './InsertionSortVisualizer';
 import { InsertionSortControls } from './InsertionSortControls';
 
@@ -999,7 +999,7 @@ Join our Discord server for:
 - Showing off your contributions
 - Connecting with other contributors
 
-[Join Discord⛓️‍💥❌](https://discord.gg/openalgo)
+[Join Discord⛓️‍💥❌](https://discord.gg/opendsa)
 
 ### Getting Help
 
@@ -1018,8 +1018,8 @@ We appreciate all contributions! Contributors are:
 
 ## License
 
-By contributing to OpenAlgo, you agree that your contributions will be licensed under the MIT License.
+By contributing to OpenDSA, you agree that your contributions will be licensed under the MIT License.
 
 ---
 
-Thank you for contributing to OpenAlgo! Your efforts help make algorithm learning more accessible to everyone.
+Thank you for contributing to OpenDSA! Your efforts help make algorithm learning more accessible to everyone.

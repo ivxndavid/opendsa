@@ -1,6 +1,6 @@
-# OpenAlgo - System Architecture
+# OpenDSA - System Architecture
 
-> Comprehensive architecture documentation for the OpenAlgo algorithm visualization platform.
+> Comprehensive architecture documentation for the OpenDSA algorithm visualization platform.
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@
 
 ## Overview
 
-OpenAlgo is built as a **Turborepo monorepo** containing multiple applications and shared packages. This architecture enables:
+OpenDSA is built as a **Turborepo monorepo** containing multiple applications and shared packages. This architecture enables:
 
 - **Code reuse** across applications (website, app, docs)
 - **Independent deployments** for each application
@@ -72,7 +72,7 @@ flowchart TB
 
 ```mermaid
 flowchart LR
-    subgraph Root[openalgo/]
+    subgraph Root[opendsa/]
         subgraph AppsDir[apps/]
             WebApp[web/]
             MainApp[app/]
@@ -107,7 +107,7 @@ flowchart LR
 ### Directory Details
 
 ```
-openalgo/
+opendsa/
 ├── apps/
 │   ├── web/                      # Marketing website
 │   │   ├── app/                  # Next.js App Router pages
@@ -485,7 +485,7 @@ flowchart TB
 ```typescript
 // packages/visualizers/src/registry.ts
 
-import type { VisualizerPlugin, VisualizerCategory } from '@openalgo/types';
+import type { VisualizerPlugin, VisualizerCategory } from '@opendsa/types';
 
 class VisualizerRegistry {
   private plugins: Map<string, VisualizerPlugin> = new Map();
@@ -597,7 +597,7 @@ stateDiagram-v2
 
 import { useCallback, useEffect, useRef } from 'react';
 import { useStore } from 'zustand';
-import type { AnimationStep, AnimationControls } from '@openalgo/types';
+import type { AnimationStep, AnimationControls } from '@opendsa/types';
 
 interface UseAnimationOptions {
   steps: AnimationStep[];
@@ -668,7 +668,7 @@ flowchart TB
 
 import { create } from 'zustand';
 import { persist, devtools } from 'zustand/middleware';
-import type { AnimationStep } from '@openalgo/types';
+import type { AnimationStep } from '@opendsa/types';
 
 interface VisualizerState {
   // Visualizer state
@@ -736,7 +736,7 @@ export const usePreferencesStore = create<PreferencesState>()(
       toggleEditor: () => set((state) => ({ editorVisible: !state.editorVisible })),
       toggleSidebar: () => set((state) => ({ sidebarOpen: !state.sidebarOpen })),
     }),
-    { name: 'openalgo-preferences' }
+    { name: 'opendsa-preferences' }
   )
 );
 ```
@@ -802,7 +802,7 @@ flowchart TB
 ### Internal Package APIs
 
 ```typescript
-// @openalgo/algorithms - Algorithm package exports
+// @opendsa/algorithms - Algorithm package exports
 export { bubbleSort, bubbleSortSteps } from './sorting/bubble-sort';
 export { quickSort, quickSortSteps } from './sorting/quick-sort';
 export { mergeSort, mergeSortSteps } from './sorting/merge-sort';
@@ -811,21 +811,21 @@ export { binarySearch, binarySearchSteps } from './searching/binary-search';
 export { bfs, bfsSteps } from './graph/bfs';
 export { dfs, dfsSteps } from './graph/dfs';
 
-// @openalgo/visualizers - Visualizer package exports
+// @opendsa/visualizers - Visualizer package exports
 export { registry } from './registry';
 export { useAnimation } from './engine/use-animation';
 export { BubbleSortVisualizer } from './sorting/BubbleSortVisualizer';
 export { QuickSortVisualizer } from './sorting/QuickSortVisualizer';
 // ... other visualizers
 
-// @openalgo/ui - UI component exports
+// @opendsa/ui - UI component exports
 export { Button } from './components/button';
 export { Card } from './components/card';
 export { Slider } from './components/slider';
 export { Input } from './components/input';
 // ... other components
 
-// @openalgo/types - Type exports
+// @opendsa/types - Type exports
 export type { AnimationStep, StepType } from './animation.types';
 export type { VisualizerPlugin, VisualizerMeta } from './visualizer.types';
 export type { AlgorithmResult } from './algorithm.types';
@@ -835,7 +835,7 @@ export type { AlgorithmResult } from './algorithm.types';
 
 ```typescript
 // URL structure for sharing visualizations
-// https://app.openalgo.dev/visualize/sorting/bubble-sort?data=5,3,8,1,2&step=5&speed=50
+// https://app.opendsa.dev/visualize/sorting/bubble-sort?data=5,3,8,1,2&step=5&speed=50
 
 interface URLState {
   data?: string;      // Comma-separated values
@@ -954,4 +954,4 @@ This architecture provides:
 5. **Accessibility** - Built-in from the start
 6. **Type safety** - Full TypeScript coverage
 
-The modular design ensures that OpenAlgo can grow with its community while maintaining code quality and user experience.
+The modular design ensures that OpenDSA can grow with its community while maintaining code quality and user experience.

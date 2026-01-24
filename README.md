@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="https://placehold.co/30x30?text=OA" alt="OpenAlgo Logo" width="120" height="120">
+  <img src="https://placehold.co/120x60?text=oDSA" alt="OpenDSA Logo" width="90" height="60">
 </p>
 
-<h1 align="center">OpenAlgo</h1>
+<h1 align="center">OpenDSA</h1>
 
 <p align="center">
   <strong>See algorithms come to life</strong>
@@ -15,39 +15,39 @@
 </p>
 
 <p align="center">
-  <a href="https://openalgo.dev.vercel.app">Website⛓️‍💥❌</a>
+  <a href="https://opendsa.dev.vercel.app">Website⛓️‍💥❌</a>
   ·
-  <a href="https://app.openalgo.dev.vercel.app">Launch App⛓️‍💥❌</a>
+  <a href="https://app.opendsa.dev.vercel.app">Launch App⛓️‍💥❌</a>
   ·
-  <a href="https://docs.openalgo.dev.vercel.app">Documentation⛓️‍💥❌</a>
+  <a href="https://docs.opendsa.dev.vercel.app">Documentation⛓️‍💥❌</a>
   ·
-  <a href="https://discord.gg/openalgo">Discord⛓️‍💥❌</a>
+  <a href="https://discord.gg/opendsa">Discord⛓️‍💥❌</a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/soloshun/openalgo/actions/workflows/ci.yml">
-    <img src="https://github.com/soloshun/openalgo/actions/workflows/ci.yml/badge.svg" alt="CI Status">
+  <a href="https://github.com/soloshun/opendsa/actions/workflows/ci.yml">
+    <img src="https://github.com/soloshun/opendsa/actions/workflows/ci.yml/badge.svg" alt="CI Status">
   </a>
-  <a href="https://github.com/soloshun/openalgo/blob/main/LICENSE">
+  <a href="https://github.com/soloshun/opendsa/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   </a>
-  <a href="https://discord.gg/openalgo">
+  <a href="https://discord.gg/opendsa">
     <img src="https://img.shields.io/discord/000000000000000000?color=7289da&label=discord" alt="Discord">
   </a>
 </p>
 
 ---
 
-## What is OpenAlgo?
+## What is OpenDSA?
 
-OpenAlgo is an interactive visualization platform that helps you understand how algorithms and data structures work through step-by-step animations. Whether you're:
+OpenDSA is an interactive visualization platform that helps you understand how algorithms and data structures work through step-by-step animations. Whether you're:
 
 - **Learning** algorithms for the first time
 - **Teaching** computer science concepts
 - **Preparing** for technical interviews
 - **Building** educational content
 
-OpenAlgo makes complex algorithms visual and intuitive.
+OpenDSA makes complex algorithms visual and intuitive.
 
 ## Features
 
@@ -83,14 +83,14 @@ OpenAlgo makes complex algorithms visual and intuitive.
 
 ### Try Online
 
-Visit [app.openalgo.dev](https://app.openalgo.dev.vercel.app) to start visualizing algorithms immediately - no installation required.
+Visit [app.opendsa.dev](https://app.opendsa.dev.vercel.app) to start visualizing algorithms immediately - no installation required.
 
 ### Run Locally
 
 ```bash
 # Clone the repository
-git clone https://github.com/soloshun/openalgo.git
-cd openalgo
+git clone https://github.com/soloshun/opendsa.git
+cd opendsa
 
 # Install dependencies
 pnpm install
@@ -103,10 +103,10 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## Project Structure
 
-OpenAlgo is a monorepo built with [Turborepo](https://turbo.build/):
+OpenDSA is a monorepo built with [Turborepo](https://turbo.build/):
 
 ```
-openalgo/
+opendsa/
 ├── apps/
 │   ├── app/          # Main visualizer application
 │   ├── web/          # Marketing website
@@ -183,18 +183,18 @@ pnpm type-check
 
 ```bash
 # Run only the main app
-pnpm dev --filter=@openalgo/app
+pnpm dev --filter=@opendsa/app
 
 # Run only the website
-pnpm dev --filter=@openalgo/web
+pnpm dev --filter=@opendsa/web
 
 # Run only the docs
-pnpm dev --filter=@openalgo/docs
+pnpm dev --filter=@opendsa/docs
 ```
 
 ## Roadmap
 
-See our [Roadmap](https://github.com/soloshun/openalgo/blob/main/ROADMAP.md) for planned features.
+See our [Roadmap](https://github.com/soloshun/opendsa/blob/main/ROADMAP.md) for planned features.
 
 **Upcoming:**
 - Graph algorithms (BFS, DFS, Dijkstra)
@@ -205,13 +205,13 @@ See our [Roadmap](https://github.com/soloshun/openalgo/blob/main/ROADMAP.md) for
 
 ## Community
 
-- **Discord**: [Join our community ⛓️‍💥❌](https://discord.gg/openalgo)
-- **Twitter**: [@self.solo_shun⛓️‍💥❌](https://twitter.com/openalgo)
-- **GitHub Discussions**: [Ask questions](https://github.com/soloshun/openalgo/discussions)
+- **Discord**: [Join our community ⛓️‍💥❌](https://discord.gg/opendsa)
+- **Twitter**: [@self.solo_shun⛓️‍💥❌](https://twitter.com/opendsa)
+- **GitHub Discussions**: [Ask questions](https://github.com/soloshun/opendsa/discussions)
 
 ## Support
 
-If you find OpenAlgo useful, consider:
+If you find OpenDSA useful, consider:
 
 - Giving it a star on GitHub
 - Sharing it with others
@@ -220,16 +220,16 @@ If you find OpenAlgo useful, consider:
 
 ## License
 
-OpenAlgo is [MIT licensed](LICENSE).
+OpenDSA is [MIT licensed](LICENSE).
 
 ---
 
 <p align="center">
-  Made with love by the OpenAlgo community
+  Made with love by the OpenDSA community
 </p>
 
 <p align="center">
-  <a href="https://github.com/soloshun/openalgo/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=soloshun/openalgo" />
+  <a href="https://github.com/soloshun/opendsa/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=soloshun/opendsa" />
   </a>
 </p>

@@ -8,7 +8,7 @@ importers:
 
   .:
     devDependencies:
-      '@openalgo/config':
+      '@opendsa/config':
         specifier: workspace:*
         version: link:packages/config
       husky:
