@@ -1,0 +1,30 @@
+{
+  "name": "openalgo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "An open-source, interactive platform for visualizing data structures and algorithms.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "type-check": "turbo type-check",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\"",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@openalgo/config": "workspace:*",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.8.0",
+    "turbo": "^2.7.5"
+  },
+  "keywords": [],
+  "author": "Solomon Eshun",
+  "license": "MIT",
+  "packageManager": "pnpm@10.28.1",
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}
