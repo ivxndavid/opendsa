@@ -3,17 +3,40 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const array = [2, 5, 8, 11, 12, 16, 23, 28, 38, 56, 60, 67, 72, 81, 91, 99, 123, 212];
+const DESKTOP_ARRAY = [2, 5, 8, 11, 12, 16, 23, 28, 38, 56, 60, 67, 72, 81, 91, 99, 123, 212];
+const MOBILE_ARRAY = [67, 69, 70, 77, 81, 98];
 
 export function ArraySearch() {
+  const [array, setArray] = useState(DESKTOP_ARRAY);
   const target = 67;
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [left, setLeft] = useState(0);
-  const [right, setRight] = useState(array.length - 1);
+  const [right, setRight] = useState(DESKTOP_ARRAY.length - 1);
   const [found, setFound] = useState(false);
 
+  // Handle responsive array
   useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setArray(MOBILE_ARRAY);
+      } else {
+        setArray(DESKTOP_ARRAY);
+      }
+    };
+
+    // Initial check
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    let isCancelled = false;
+
     const animateBinarySearch = async () => {
+      if (isCancelled) return;
+
       setCurrentIndex(-1);
       setLeft(0);
       setRight(array.length - 1);
@@ -23,6 +46,8 @@ export function ArraySearch() {
       let r = array.length - 1;
 
       while (l <= r) {
+        if (isCancelled) return;
+
         const mid = Math.floor((l + r) / 2);
         setCurrentIndex(mid);
         setLeft(l);
@@ -39,14 +64,19 @@ export function ArraySearch() {
         }
       }
 
-      await new Promise((resolve) => setTimeout(resolve, 2500));
+      if (!isCancelled) {
+        await new Promise((resolve) => setTimeout(resolve, 2500));
+      }
     };
 
     const interval = setInterval(animateBinarySearch, 8000);
     animateBinarySearch();
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => {
+      isCancelled = true;
+      clearInterval(interval);
+    };
+  }, [array]); // Restart animation when array changes
 
   return (
     <div className="space-y-3">
@@ -58,7 +88,7 @@ export function ArraySearch() {
 
           return (
             <motion.div
-              key={index}
+              key={`${array.length}-${index}`} // Key changes when array changes to force re-render
               className={`w-8 h-8 flex items-center justify-center rounded-md text-xs font-semibold border transition-colors ${isFound
                 ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] border-[hsl(var(--primary))]"
                 : isCurrent

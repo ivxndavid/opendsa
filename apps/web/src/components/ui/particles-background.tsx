@@ -16,9 +16,7 @@ export function ParticlesBackground() {
     });
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log("Particles loaded", container);
-  }, []);
+  const particlesLoaded = useCallback(async () => { }, []);
 
   const options: ISourceOptions = useMemo(
     () => ({

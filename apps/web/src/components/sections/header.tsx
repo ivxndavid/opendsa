@@ -1,14 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Menu, X, Sun } from "lucide-react";
+import {
+  Github,
+  Menu,
+  X,
+  // Sun 
+} from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#roadmap", label: "Roadmap" },
-  { href: "#open-source", label: "Open Source" },
+  // { href: "#open-source", label: "Open Source" },
   { href: "https://docs.opendsa.dev", label: "Docs", external: true },
 ];
 
@@ -20,7 +25,7 @@ export function Header() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl"
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-6xl"
     >
       {/* Main nav container - rounded pill style */}
       <nav className="relative flex items-center justify-between rounded-full border border-[hsl(var(--border))] bg-[hsl(var(--background))]/80 backdrop-blur-xl px-2 py-2 shadow-lg shadow-black/20">
@@ -54,9 +59,9 @@ export function Header() {
         {/* Right side buttons */}
         <div className="hidden md:flex md:items-center md:gap-2">
           {/* Theme toggle placeholder */}
-          <button className="flex h-9 w-9 items-center justify-center rounded-full text-[hsl(var(--muted-foreground))] transition-colors hover:bg-[hsl(var(--secondary))] hover:text-[hsl(var(--foreground))]">
+          {/* <button className="flex h-9 w-9 items-center justify-center rounded-full text-[hsl(var(--muted-foreground))] transition-colors hover:bg-[hsl(var(--secondary))] hover:text-[hsl(var(--foreground))]">
             <Sun className="h-4 w-4" />
-          </button>
+          </button> */}
 
           {/* GitHub star button */}
           <Link
