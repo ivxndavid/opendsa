@@ -4,6 +4,7 @@ import { Features } from "@/components/sections/features";
 import { Architecture } from "@/components/sections/architecture";
 import { TechStack } from "@/components/sections/tech-stack";
 import { Roadmap } from "@/components/sections/roadmap";
+import { AlgorithmChecklist } from "@/components/sections/algorithm-checklist";
 import { FAQ } from "@/components/sections/faq";
 import { OpenSource } from "@/components/sections/open-source";
 import { Footer } from "@/components/sections/footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <Architecture />
         <TechStack />
         <Roadmap />
+        <AlgorithmChecklist />
         <FAQ />
         <OpenSource />
       </main>

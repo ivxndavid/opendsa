@@ -20,6 +20,7 @@ const footerLinks = {
     { label: "GitHub", href: "https://github.com/soloshun/opendsa" },
     { label: "Discord", href: "#" },
     { label: "Twitter", href: "#" },
+    { label: "Support Us ☕", href: "https://docs.opendsa.dev/sponsors" },
   ],
 };
 
@@ -46,10 +47,10 @@ export function Footer() {
       {/* Gradient from bottom */}
       <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--primary))]/10 via-transparent to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-[radial-gradient(ellipse_at_bottom,_hsl(var(--primary))_0%,_transparent_60%)] opacity-[0.08]" />
-      
+
       {/* Background */}
       <div className="absolute inset-0 bg-[hsl(var(--card))]/80" />
-      
+
       {/* Noise overlay */}
       <div className="noise absolute inset-0">
         <div className="absolute inset-0" />
