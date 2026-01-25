@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+const array = [2, 5, 8, 11, 12, 16, 23, 28, 38, 56, 60, 67, 72, 81, 91, 99, 123, 212];
+
 export function ArraySearch() {
-  const array = [2, 5, 8, 11, 12, 16, 23, 28, 38, 56, 60, 67, 72, 81, 91, 99, 123, 212];
   const target = 67;
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [left, setLeft] = useState(0);
@@ -58,15 +59,14 @@ export function ArraySearch() {
           return (
             <motion.div
               key={index}
-              className={`w-8 h-8 flex items-center justify-center rounded-md text-xs font-semibold border transition-colors ${
-                isFound
-                  ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] border-[hsl(var(--primary))]"
-                  : isCurrent
+              className={`w-8 h-8 flex items-center justify-center rounded-md text-xs font-semibold border transition-colors ${isFound
+                ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] border-[hsl(var(--primary))]"
+                : isCurrent
                   ? "bg-yellow-500/20 text-yellow-500 border-yellow-500"
                   : isInRange
-                  ? "bg-[hsl(var(--secondary))] border-[hsl(var(--border))] text-[hsl(var(--foreground))]"
-                  : "bg-[hsl(var(--muted))]/30 border-transparent text-[hsl(var(--muted-foreground))]/50"
-              }`}
+                    ? "bg-[hsl(var(--secondary))] border-[hsl(var(--border))] text-[hsl(var(--foreground))]"
+                    : "bg-[hsl(var(--muted))]/30 border-transparent text-[hsl(var(--muted-foreground))]/50"
+                }`}
               style={{ fontFamily: "var(--font-mono)" }}
               animate={{
                 scale: isCurrent ? 1.1 : 1,

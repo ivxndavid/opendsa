@@ -9,7 +9,7 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background - base layer */}
       <div className="absolute inset-0 bg-[hsl(var(--background))] z-0 opacity-90" />
-      
+
       {/* Grid pattern - subtle overlay */}
       <div className="absolute inset-0 grid-pattern opacity-50 z-[1]" />
 
@@ -110,7 +110,7 @@ export function Hero() {
             </Link>
             <Link
               href="#features"
-              className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full border border-[hsl(var(--border))] bg-transparent px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-medium text-[hsl(var(--foreground))] transition-all hover:bg-[hsl(var(--secondary))] hover:border-[hsl(var(--primary))]/50"
+              className="w-full sm:w-auto flex items-center justify-center gap-2 rounded-full border border-[hsl(var(--border))] bg-transparent px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-medium text-[hsl(var(--foreground))] transition-all hover:bg-[hsl(var(--secondary))]/80 hover:border-[hsl(var(--primary))]/50"
             >
               See Features
             </Link>
