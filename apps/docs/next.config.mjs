@@ -2,6 +2,9 @@ import nextra from 'nextra'
 
 const withNextra = nextra({
   // Nextra-specific options can go here.
+  latex: true,
+  // This helps with code block parsing
+  defaultShowCopyCode: true,
 })
 
 export default withNextra({

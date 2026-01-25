@@ -1,0 +1,25 @@
+# Visualizer Architecture
+
+The core of OpenDSA is the extensible visualizer system.
+
+## Key Concepts
+
+### Plugin System
+Each algorithm visualization is a "Plugin" that provides:
+- **Meta**: Name, category, complexity.
+- **Component**: The React component rendering the visualization.
+- **Generator**: A function that generates animation steps.
+
+### Example: Bubble Sort
+```typescript
+export const BubbleSortPlugin: VisualizerPlugin = {
+  meta: {
+    id: "bubble-sort",
+    name: "Bubble Sort",
+    category: "sorting",
+    complexity: { time: { worst: "O(n²)", ... }, space: "O(1)" }
+  },
+  component: BubbleSortRenderer,
+  generateSteps: generateBubbleSortSteps
+};
+```
