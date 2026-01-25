@@ -12,19 +12,9 @@ const plugins = [
   { id: "bfs", label: "BFSPlugin", x: 50, y: 80 },
 ];
 
-// Registry nodes
-const registryNodes = [
-  { id: "register", label: "register", x: 60, y: 50 },
-  { id: "get", label: "get", x: 40, y: 70 },
-  { id: "getByCategory", label: "getByCategory", x: 60, y: 70 },
-  { id: "getAll", label: "getAll", x: 80, y: 70 },
-];
 
-// App nodes
-const appNodes = [
-  { id: "router", label: "Dynamic Router", x: 20, y: 50 },
-  { id: "renderer", label: "Visualizer Renderer", x: 20, y: 85 },
-];
+
+
 
 export function ArchitectureFlow() {
   const [activePlugin, setActivePlugin] = useState(0);
@@ -231,11 +221,10 @@ export function ArchitectureFlow() {
         {[0, 1, 2, 3, 4].map((step) => (
           <div
             key={step}
-            className={`h-1.5 w-1.5 rounded-full transition-all ${
-              flowStep === step
-                ? "bg-[hsl(var(--primary))] scale-125"
-                : "bg-[hsl(var(--muted-foreground))]/30"
-            }`}
+            className={`h-1.5 w-1.5 rounded-full transition-all ${flowStep === step
+              ? "bg-[hsl(var(--primary))] scale-125"
+              : "bg-[hsl(var(--muted-foreground))]/30"
+              }`}
           />
         ))}
       </div>
