@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import { motion } from "framer-motion";
 import {
   BarChart3,
@@ -12,7 +14,10 @@ import {
   Keyboard,
   Share2,
   Sparkles,
+  ClipboardCopy,
+  Check
 } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
 import { SortingBars } from "@/components/animations/sorting-bars";
 import { BinaryTree } from "@/components/animations/binary-tree";
 import { GraphVisualization } from "@/components/animations/graph-visualization";
@@ -28,6 +33,60 @@ interface FeatureCardProps {
   children?: React.ReactNode;
   className?: string;
   index?: number;
+}
+
+function CopyButton({ text }: { text: string }) {
+  const [copied, setCopied] = React.useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Failed to copy:", err);
+    }
+  };
+
+  return (
+    <div className="relative">
+      <button
+        onClick={handleCopy}
+        className="group/btn relative flex items-center justify-center rounded-md bg-[hsl(var(--primary))]/20 p-2 text-[hsl(var(--primary))]/80 transition-all hover:bg-[hsl(var(--primary))]/30 hover:text-[hsl(var(--primary))] cursor-pointer"
+      >
+        <AnimatePresence mode="wait" initial={false}>
+          {copied ? (
+            <motion.div
+              key="check"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+            >
+              <Check className="h-4 w-4" />
+            </motion.div>
+          ) : (
+            <motion.div
+              key="copy"
+              initial={{ scale: 0.5, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.5, opacity: 0 }}
+            >
+              <ClipboardCopy className="h-4 w-4" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* Tooltip */}
+        <div className="absolute -top-10 left-1/2 -translate-x-1/2 pointer-events-none opacity-0 group-hover/btn:opacity-100 transition-opacity">
+          <div className="bg-[hsl(var(--primary))] text-[hsl(var(--background))] text-[10px] font-bold py-1 px-2 rounded whitespace-nowrap">
+            {copied ? "Copied!" : "Copy URL"}
+            {/* Arrow */}
+            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[hsl(var(--primary))] rotate-45" />
+          </div>
+        </div>
+      </button>
+    </div>
+  );
 }
 
 function FeatureCard({ title, description, icon, children, className = "", index = 0 }: FeatureCardProps) {
@@ -46,7 +105,7 @@ function FeatureCard({ title, description, icon, children, className = "", index
 
       {/* Hover gradient - diagonal slant */}
       <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--primary))]/8 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-      
+
       {/* Corner glow on hover - slanted */}
       <div className="absolute -top-10 -right-10 w-40 h-40 bg-[hsl(var(--primary))]/10 rounded-full blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rotate-12" />
 
@@ -56,12 +115,12 @@ function FeatureCard({ title, description, icon, children, className = "", index
         <div className="flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-xl bg-[hsl(var(--primary))]/10 text-[hsl(var(--primary))] border border-[hsl(var(--primary))]/20 mb-4">
           {icon}
         </div>
-        
+
         {/* Title */}
         <h3 className="text-base sm:text-lg font-bold tracking-tight text-[hsl(var(--foreground))] uppercase">
           {title}
         </h3>
-        
+
         {/* Description */}
         <p className="mt-2 text-xs sm:text-sm leading-relaxed text-[hsl(var(--muted-foreground))]">
           {description}
@@ -80,7 +139,7 @@ export function Features() {
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background))] via-[hsl(var(--secondary))]/30 to-[hsl(var(--background))]" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      
+
       {/* Noise overlay */}
       <div className="noise absolute inset-0">
         <div className="absolute inset-0" />
@@ -258,8 +317,9 @@ export function Features() {
           icon={<Share2 className="h-5 w-5" />}
           index={9}
         >
-          <div className="rounded-lg bg-[hsl(var(--secondary))] border border-[hsl(var(--border))]/50 px-4 py-3 text-sm font-mono text-[hsl(var(--muted-foreground))]">
-            opendsa.dev/visualize/sorting/bubble?data=5,3,8,1&step=4
+          <div className="rounded-lg bg-[hsl(var(--secondary))] border border-[hsl(var(--border))]/50 px-4 py-3 text-sm font-mono text-[hsl(var(--muted-foreground))] flex items-center justify-between">
+            <span>opendsa.dev/visualize/sorting/bubble?data=5,3,8,1&step=4</span>
+            <CopyButton text="https://opendsa.dev.vercel.app/visualize/sorting/bubble?data=5,3,8,1&step=4" />
           </div>
         </FeatureCard>
       </div>
