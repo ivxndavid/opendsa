@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Menu, X, Sun, Moon } from "lucide-react";
+import { Github, Menu, X, Sun } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
