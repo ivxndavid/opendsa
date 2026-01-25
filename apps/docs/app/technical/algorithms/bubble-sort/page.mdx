@@ -1,0 +1,28 @@
+# Bubble Sort
+
+Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order.
+
+## Complexity
+
+| Type | Complexity |
+| :--- | :--- |
+| **Time (Worst)** | $O(n^2)$ |
+| **Time (Average)** | $O(n^2)$ |
+| **Time (Best)** | $O(n)$ |
+| **Space** | $O(1)$ |
+
+## Implementation
+
+```typescript
+function bubbleSort(arr: number[]): number[] {
+  const n = arr.length;
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+}
+```

@@ -1,0 +1,42 @@
+---
+title: Migration
+description: Overview of the migration from the legacy project to OpenDSA.
+---
+
+# Migration to OpenDSA
+
+> A high-level overview of migrating from the legacy [ds-algo-deck](https://dsalgodeck.netlify.app/) project to the new OpenDSA platform.
+
+## Overview
+
+The OpenDSA project is a complete rewrite and modernization of the previous [`ds-algo-deck`](https://dsalgodeck.netlify.app/) visualization tool. This migration was driven by the need for better scalability, performance, and a more robust contributor experience.
+
+## Why Migrate?
+
+The legacy project was built with **React + Vite** and **Redux Toolkit**. While functional, as the project grew, we encountered limitations in:
+
+- **Scalability**: Managing a growing number of visualizers in a single repository without clear boundaries was becoming difficult.
+- **Performance**: Heavy visualizations started to impact UI responsiveness.
+- **Maintainability**: Mixed styling approaches (Tailwind + Styled Components) and lack of strict typing made contributions harder.
+
+## The New Stack
+
+OpenDSA introduces a modern, monorepo-based architecture:
+
+- **Next.js & Turborepo**: For efficient build pipelines and server-side capabilities.
+- **TypeScript**: Strict type safety across the entire codebase.
+- **Zustand**: Lightweight, performant state management.
+- **shadcn/ui**: a cohesive, accessible design system.
+
+| Aspect | Legacy (ds-algo-deck) | OpenDSA |
+|--------|------------------------|---------|
+| **Core** | React SPA | Next.js App Router |
+| **Repo** | Single Repo | Monorepo (Turborepo) |
+| **State** | Redux | Zustand |
+| **Styles** | Mixed | TailwindCSS + shadcn/ui |
+
+## Legacy Repository
+
+This documentation serves as the new home for the project. The old repository is kept for reference but development has moved here.
+
+For detailed internal migration steps used during the transition, please refer to the internal documentation or the project's commit history.

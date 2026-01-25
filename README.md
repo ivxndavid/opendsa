@@ -222,10 +222,9 @@ If you find OpenDSA useful, consider:
 
 OpenDSA is [MIT licensed](LICENSE).
 
----
 
 <p align="center">
-  Made with love by the OpenDSA community
+  Made with love by the Solo Shun for the OpenDSA community
 </p>
 
 <p align="center">

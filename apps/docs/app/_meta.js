@@ -1,8 +1,8 @@
 export default {
-  index: 'Home',
-  architecture: 'Architecture',
-  roadmap: 'Roadmap',
-  migration: 'Migration',
-  tech_stack: 'Tech Stack'
+  index: 'Overview',
+  project: 'Project Overview',
+  technical: 'Technical Docs',
+  code_of_conduct: 'Code of Conduct',
+  contributing: 'Contributing',
+  sponsors: 'Support Us☕'
 }
-
