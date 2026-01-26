@@ -27,7 +27,7 @@ export const categories: AlgorithmCategories = {
     items: {
       Arrays: {
         topics: [
-          { name: "Basic Array Operations", implemented: true },
+          { name: "Basic Array Operations", implemented: false },
           { name: "Dynamic Arrays", implemented: false },
           { name: "Multi-dimensional Arrays", implemented: false },
         ],
@@ -95,7 +95,7 @@ export const categories: AlgorithmCategories = {
     items: {
       "Sorting (Easy)": {
         topics: [
-          { name: "Bubble Sort", implemented: true },
+          { name: "Bubble Sort", implemented: false },
           { name: "Selection Sort", implemented: false },
           { name: "Insertion Sort", implemented: false },
         ],
@@ -116,7 +116,7 @@ export const categories: AlgorithmCategories = {
       },
       Searching: {
         topics: [
-          { name: "Linear Search", implemented: true },
+          { name: "Linear Search", implemented: false },
           { name: "Binary Search", implemented: false },
           { name: "Jump Search", implemented: false },
           { name: "Exponential Search", implemented: false },
