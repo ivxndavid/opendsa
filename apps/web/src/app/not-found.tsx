@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Home, ArrowLeft, Github, BookOpen, Globe } from "lucide-react";
@@ -8,11 +8,11 @@ import { Home, ArrowLeft, Github, BookOpen, Globe } from "lucide-react";
 // Glitch text effect
 function GlitchText({ text }: { text: string }) {
   const [glitchedText, setGlitchedText] = useState(text);
-  
+
   useEffect(() => {
     const glitchChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
     let interval: NodeJS.Timeout;
-    
+
     const startGlitch = () => {
       let iterations = 0;
       interval = setInterval(() => {
@@ -35,7 +35,7 @@ function GlitchText({ text }: { text: string }) {
 
     startGlitch();
     const loopInterval = setInterval(startGlitch, 5000);
-    
+
     return () => {
       clearInterval(interval);
       clearInterval(loopInterval);
@@ -47,20 +47,24 @@ function GlitchText({ text }: { text: string }) {
 
 // Floating binary particles
 function BinaryParticle({ delay }: { delay: number }) {
-  const binary = Math.random() > 0.5 ? "1" : "0";
-  const left = Math.random() * 100;
-  const duration = 5 + Math.random() * 5;
-  
+  /* eslint-disable react-hooks/purity */
+  const { binary, left, duration } = useMemo(() => ({
+    binary: Math.random() > 0.5 ? "1" : "0",
+    left: Math.random() * 100,
+    duration: 5 + Math.random() * 5
+  }), []);
+  /* eslint-enable react-hooks/purity */
+
   return (
     <motion.div
       initial={{ y: -20, opacity: 0 }}
-      animate={{ 
-        y: "100vh", 
-        opacity: [0, 0.3, 0.3, 0] 
+      animate={{
+        y: "100vh",
+        opacity: [0, 0.3, 0.3, 0]
       }}
-      transition={{ 
-        duration, 
-        delay, 
+      transition={{
+        duration,
+        delay,
         repeat: Infinity,
         ease: "linear"
       }}
@@ -81,20 +85,27 @@ export default function NotFound() {
     setCurrentPath(window.location.pathname);
   }, []);
 
+  // Generate stable random delays for particles
+  /* eslint-disable react-hooks/purity */
+  const particleDelays = useMemo(() => {
+    return Array.from({ length: 20 }, () => Math.random() * 3);
+  }, []);
+  /* eslint-enable react-hooks/purity */
+
   if (!mounted) return null;
 
   return (
     <div className="relative min-h-screen bg-[hsl(var(--background))] overflow-hidden flex items-center justify-center">
       {/* Binary rain */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <BinaryParticle key={i} delay={Math.random() * 3} />
+        {particleDelays.map((delay, i) => (
+          <BinaryParticle key={i} delay={delay} />
         ))}
       </div>
 
       {/* Grid pattern */}
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      
+
       {/* Noise overlay */}
       <div className="noise absolute inset-0 opacity-50">
         <div className="absolute inset-0" />
@@ -179,7 +190,7 @@ export default function NotFound() {
             <GlitchText text="PAGE NOT FOUND" />
           </h2>
           <p className="text-sm text-[hsl(var(--muted-foreground))] max-w-md mx-auto">
-            The algorithm you&apos;re searching for doesn&apos;t exist in our registry. 
+            The algorithm you&apos;re searching for doesn&apos;t exist in our registry.
             Perhaps it&apos;s still being visualized somewhere in the void.
           </p>
         </motion.div>
@@ -215,22 +226,22 @@ export default function NotFound() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm"
         >
-          <Link 
-            href="https://app.opendsa.dev" 
+          <Link
+            href="https://app.opendsa.dev"
             className="flex items-center gap-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
           >
             <Globe className="h-4 w-4" />
             Launch App
           </Link>
-          <Link 
-            href="https://docs.opendsa.dev" 
+          <Link
+            href="https://docs.opendsa.dev"
             className="flex items-center gap-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
           >
             <BookOpen className="h-4 w-4" />
             Documentation
           </Link>
-          <Link 
-            href="https://github.com/soloshun/opendsa" 
+          <Link
+            href="https://github.com/soloshun/opendsa"
             className="flex items-center gap-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
           >
             <Github className="h-4 w-4" />

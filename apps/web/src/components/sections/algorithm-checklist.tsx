@@ -153,7 +153,7 @@ export function AlgorithmChecklist() {
 
           <p className="mt-4 text-sm sm:text-base text-[hsl(var(--muted-foreground))] max-w-2xl mx-auto">
             {total}+ algorithms and data structures. This is what we&apos;re building together.
-            Pick one and contribute, or suggest new ones. ML/DL, algorithms from other fields, and visualizers are all welcome.
+            Pick one and contribute, or suggest new ones. ML/DL, Maths, Physics, algorithms from other fields, and visualizers are all welcome.
           </p>
 
           {/* Progress bar */}
@@ -263,7 +263,7 @@ export function AlgorithmChecklist() {
         >
           <p className="text-xs sm:text-sm text-[hsl(var(--muted-foreground))]">
             <span className="text-[hsl(var(--primary))] font-semibold">Open to Contributions:</span>{" "}
-            Machine Learning & Deep Learning Algorithm Visualizers etc...
+            Machine Learning, Deep Learning, Physics, Math, Algorithm Visualizers etc...
           </p>
         </motion.div>
       </div>
