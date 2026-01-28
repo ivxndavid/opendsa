@@ -275,7 +275,7 @@ export default function NotFound() {
           <Link href="https://opendsa.vercel.app" style={{ color: "inherit", textDecoration: "none" }}>
             → website
           </Link>
-          <Link href="https://docs.opendsa.vercel.app" style={{ color: "inherit", textDecoration: "none" }}>
+          <Link href="https://docs-opendsa.vercel.app" style={{ color: "inherit", textDecoration: "none" }}>
             → docs
           </Link>
           <Link href="https://github.com/soloshun/opendsa" style={{ color: "inherit", textDecoration: "none" }}>

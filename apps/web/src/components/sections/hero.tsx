@@ -102,7 +102,7 @@ export function Hero() {
             className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full max-w-md sm:max-w-none px-4 sm:px-0"
           >
             <Link
-              href="https://app.opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
+              href="https://app-opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
               className="group w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 rounded-full bg-[hsl(var(--primary))] px-6 sm:px-8 py-3.5 sm:py-4 text-sm sm:text-base font-semibold text-[hsl(var(--primary-foreground))] transition-all hover:opacity-90 glow"
             >
               Start Visualizing

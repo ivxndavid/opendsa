@@ -9,18 +9,18 @@ const footerLinks = {
   product: [
     { label: "Features", href: "#features" },
     { label: "Roadmap", href: "#roadmap" },
-    { label: "Launch App", href: "https://app.opendsa.vercel.app" }, // TODO: change to https://app.opendsa.dev
+    { label: "Launch App", href: "https://app-opendsa.vercel.app" }, // TODO: change to https://app.opendsa.dev
   ],
   resources: [
-    { label: "Documentation", href: "https://docs.opendsa.vercel.app" }, // TODO: change to https://docs.opendsa.dev
-    { label: "Contributing", href: "https://docs.opendsa.vercel.app/contributing" }, // TODO: change to https://docs.opendsa.dev/contributing
+    { label: "Documentation", href: "https://docs-opendsa.vercel.app" }, // TODO: change to https://docs.opendsa.dev
+    { label: "Contributing", href: "https://docs-opendsa.vercel.app/contributing" }, // TODO: change to https://docs.opendsa.dev/contributing
     { label: "Changelog", href: "https://github.com/soloshun/opendsa/releases" },
   ],
   community: [
     { label: "GitHub", href: "https://github.com/soloshun/opendsa" },
     { label: "Discord", href: "https://discord.gg/mfQvUa2y4r" },
     { label: "Twitter", href: "#" },
-    { label: "Support Us ☕", href: "https://docs.opendsa.vercel.app/sponsors" }, // TODO: change to 
+    { label: "Support Us ☕", href: "https://docs-opendsa.vercel.app/sponsors" }, // TODO: change to 
   ],
 };
 
