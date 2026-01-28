@@ -83,6 +83,8 @@ export default function NotFound() {
   useEffect(() => {
     setMounted(true);
     setCurrentPath(window.location.pathname);
+    // Update document title for SEO
+    document.title = "404 - Page Not Found | OpenDSA";
   }, []);
 
   // Generate stable random delays for particles

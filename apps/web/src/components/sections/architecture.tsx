@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Settings2, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { ArchitectureFlow } from "@/components/animations/architecture-flow";
+// import { ArchitectureFlow } from "@/components/animations/architecture-flow";
 
 const codeTabs = [
   {
@@ -218,7 +218,7 @@ export function Architecture() {
               <div className="h-px w-16 bg-gradient-to-r from-[hsl(var(--border))] to-transparent" />
             </div>
             {/* TODO: Disable here for now */}
-            {/* <div className="flex gap-2">
+            <div className="flex gap-2">
               <button
                 onClick={() => setShowDiagram(false)}
                 className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all ${!showDiagram
@@ -228,7 +228,7 @@ export function Architecture() {
               >
                 Linear
               </button>
-              <button
+              {/* <button
                 onClick={() => setShowDiagram(true)}
                 className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all ${showDiagram
                   ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]"
@@ -236,8 +236,8 @@ export function Architecture() {
                   }`}
               >
                 Diagram
-              </button>
-            </div> */}
+              </button> */}
+            </div>
           </div>
 
           {/* Flow visualization */}
@@ -250,7 +250,8 @@ export function Architecture() {
             {showDiagram ? (
               /* Architecture Diagram Flow */
               <div className="relative z-10">
-                <ArchitectureFlow />
+                {/* <ArchitectureFlow /> */}
+                <span className="text-xs text-[hsl(var(--muted-foreground))]">Coming soon</span>
               </div>
             ) : (
               /* Linear Flow */

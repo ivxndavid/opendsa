@@ -71,6 +71,8 @@ export default function NotFound() {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setMounted(true);
     setCurrentPath(window.location.pathname);
+    // Update document title for SEO
+    document.title = "404 - Page Not Found | OpenDSA";
   }, []);
 
   if (!mounted) {

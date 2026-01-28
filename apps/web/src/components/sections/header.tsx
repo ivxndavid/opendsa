@@ -1,24 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Github,
-  Menu,
-  X,
-  // Sun 
-} from "lucide-react";
+import { Github, Menu, X, Star } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#roadmap", label: "Roadmap" },
-  // { href: "#open-source", label: "Open Source" },
   { href: "https://docs.opendsa.vercel.app", label: "Docs", external: true }, // TODO: CHANGE URL TO https://docs.opendsa.dev AFTER DOMAIN IS BOUGHT
 ];
 
+function useGitHubStars() {
+  const [stars, setStars] = useState<number | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    async function fetchStars() {
+      try {
+        const res = await fetch("https://api.github.com/repos/soloshun/opendsa");
+        if (res.ok) {
+          const data = await res.json();
+          setStars(data.stargazers_count);
+        }
+      } catch (error) {
+        console.error("Failed to fetch stars:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchStars();
+  }, []);
+
+  return { stars, loading };
+}
+
+function formatStars(count: number | null): string {
+  if (count === null) return "";
+  if (count >= 1000) {
+    return (count / 1000).toFixed(1) + "k";
+  }
+  return count.toString();
+}
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { stars, loading } = useGitHubStars();
 
   return (
     <motion.header
@@ -58,12 +85,7 @@ export function Header() {
 
         {/* Right side buttons */}
         <div className="hidden md:flex md:items-center md:gap-2">
-          {/* Theme toggle placeholder */}
-          {/* <button className="flex h-9 w-9 items-center justify-center rounded-full text-[hsl(var(--muted-foreground))] transition-colors hover:bg-[hsl(var(--secondary))] hover:text-[hsl(var(--foreground))]">
-            <Sun className="h-4 w-4" />
-          </button> */}
-
-          {/* GitHub star button */}
+          {/* GitHub star button with count */}
           <Link
             href="https://github.com/soloshun/opendsa"
             target="_blank"
@@ -72,7 +94,12 @@ export function Header() {
           >
             <Github className="h-4 w-4" />
             <span>Star</span>
-            {/* <span className="text-[hsl(var(--muted-foreground))]">0</span> TODO: Add star count */}
+            {!loading && stars !== null && (
+              <span className="flex items-center gap-1 bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-2 py-0.5 rounded-full text-xs font-semibold">
+                <Star className="h-3 w-3 fill-current" />
+                {formatStars(stars)}
+              </span>
+            )}
           </Link>
 
           {/* Launch App CTA */}
@@ -127,7 +154,12 @@ export function Header() {
               className="flex-1 flex items-center justify-center gap-2 rounded-xl border border-[hsl(var(--border))] bg-[hsl(var(--secondary))] py-3 text-sm font-medium text-[hsl(var(--foreground))]"
             >
               <Github className="h-4 w-4" />
-              GitHub
+              <span>Star</span>
+              {!loading && stars !== null && (
+                <span className="bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] px-2 py-0.5 rounded-full text-xs font-semibold">
+                  {formatStars(stars)}
+                </span>
+              )}
             </Link>
             <Link
               href="https://app.opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
