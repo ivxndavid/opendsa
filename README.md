@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://placehold.co/120x60?text=oDSA" alt="OpenDSA Logo" width="90" height="60">
+  <img src="opendsa_logo.png" alt="OpenDSA Logo" width="90" height="60">
 </p>
 
 <h1 align="center">OpenDSA</h1>
@@ -15,13 +15,13 @@
 </p>
 
 <p align="center">
-  <a href="https://opendsa.dev.vercel.app">Website⛓️‍💥❌</a>
+  <a href="https://opendsa.vercel.app">Website</a>
   ·
-  <a href="https://app.opendsa.dev.vercel.app">Launch App⛓️‍💥❌</a>
+  <a href="https://app.opendsa.vercel.app">Launch App</a>
   ·
-  <a href="https://docs.opendsa.dev.vercel.app">Documentation⛓️‍💥❌</a>
+  <a href="https://docs.opendsa.vercel.app">Documentation</a>
   ·
-  <a href="https://discord.gg/opendsa">Discord⛓️‍💥❌</a>
+  <a href="https://discord.gg/mfQvUa2y4r">Discord</a>
 </p>
 
 <p align="center">
@@ -31,7 +31,7 @@
   <a href="https://github.com/soloshun/opendsa/blob/main/LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
   </a>
-  <a href="https://discord.gg/opendsa">
+  <a href="https://discord.gg/mfQvUa2y4r">
     <img src="https://img.shields.io/discord/000000000000000000?color=7289da&label=discord" alt="Discord">
   </a>
 </p>
@@ -83,7 +83,7 @@ OpenDSA makes complex algorithms visual and intuitive.
 
 ### Try Online
 
-Visit [app.opendsa.dev](https://app.opendsa.dev.vercel.app) to start visualizing algorithms immediately - no installation required.
+Visit [app.opendsa.dev](https://app.opendsa.vercel.app) to start visualizing algorithms immediately - no installation required.
 
 ### Run Locally
 
@@ -205,7 +205,7 @@ See our [Roadmap](https://github.com/soloshun/opendsa/blob/main/ROADMAP.md) for 
 
 ## Community
 
-- **Discord**: [Join our community ⛓️‍💥❌](https://discord.gg/opendsa)
+- **Discord**: [Join our community](https://discord.gg/mfQvUa2y4r)
 - **Twitter**: [@self.solo_shun⛓️‍💥❌](https://twitter.com/opendsa)
 - **GitHub Discussions**: [Ask questions](https://github.com/soloshun/opendsa/discussions)
 

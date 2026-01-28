@@ -409,6 +409,7 @@ export function OpenSource() {
 
           {/* Contribution types */}
           <div className="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+            <span className="text-[hsl(var(--primary))] text-sm font-semibold">Contribution types:</span>{" "}
             {[
               "New Algorithms",
               "Bug Fixes",

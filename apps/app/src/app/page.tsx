@@ -455,7 +455,7 @@ export default function ComingSoon() {
               </Link>
 
               <Link
-                href="https://opendsa.dev"
+                href="https://opendsa.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
@@ -479,7 +479,7 @@ export default function ComingSoon() {
               </Link>
 
               <Link
-                href="https://docs.opendsa.dev"
+                href="https://docs.opendsa.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
