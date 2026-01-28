@@ -319,7 +319,7 @@ export function Features() {
         >
           <div className="rounded-lg bg-[hsl(var(--secondary))] border border-[hsl(var(--border))]/50 px-4 py-3 text-sm font-mono text-[hsl(var(--muted-foreground))] flex items-center justify-between">
             <span>opendsa.dev/visualize/sorting/bubble?data=5,3,8,1&step=4</span>
-            <CopyButton text="https://opendsa.dev.vercel.app/visualize/sorting/bubble?data=5,3,8,1&step=4" />
+            <CopyButton text="Nothing here 🥲 - Coming soon" />
           </div>
         </FeatureCard>
       </div>
