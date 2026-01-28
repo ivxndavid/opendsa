@@ -479,7 +479,7 @@ export default function ComingSoon() {
               </Link>
 
               <Link
-                href="https://docs.opendsa.vercel.app"
+                href="https://docs-opendsa.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

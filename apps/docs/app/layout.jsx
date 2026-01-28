@@ -21,7 +21,7 @@ const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
-const siteUrl = "https://docs.opendsa.vercel.app"; // TODO: Change to https://docs.opendsa.dev after domain purchase
+const siteUrl = "https://docs-opendsa.vercel.app"; // TODO: Change to https://docs.opendsa.dev after domain purchase
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
