@@ -228,14 +228,14 @@ export default function NotFound() {
           className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm"
         >
           <Link
-            href="https://app.opendsa.vercel.app"
+            href="https://app-opendsa.vercel.app"
             className="flex items-center gap-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
           >
             <Globe className="h-4 w-4" />
             Launch App
           </Link>
           <Link
-            href="https://docs.opendsa.vercel.app"
+            href="https://docs-opendsa.vercel.app"
             className="flex items-center gap-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
           >
             <BookOpen className="h-4 w-4" />

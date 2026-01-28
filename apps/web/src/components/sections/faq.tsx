@@ -25,7 +25,7 @@ const faqItems: FAQItem[] = [
   {
     id: "0x03",
     question: "CAN I CONTRIBUTE NEW ALGORITHMS?",
-    answer: "Absolutely! We welcome contributions. Check our CONTRIBUTING.md guide on GitHub or documentation website at https://docs.opendsa.vercel.app/ to get started. Each visualizer is a modular plugin, making it easy to add new ones.",
+    answer: "Absolutely! We welcome contributions. Check our CONTRIBUTING.md guide on GitHub or documentation website at https://docs-opendsa.vercel.app/ to get started. Each visualizer is a modular plugin, making it easy to add new ones.",
   },
   {
     id: "0x04",

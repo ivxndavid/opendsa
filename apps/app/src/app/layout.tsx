@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://app.opendsa.vercel.app"; // TODO: Change to https://app.opendsa.dev after domain purchase
+const siteUrl = "https://app-opendsa.vercel.app"; // TODO: Change to https://app.opendsa.dev after domain purchase
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

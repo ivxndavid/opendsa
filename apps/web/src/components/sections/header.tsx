@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#roadmap", label: "Roadmap" },
-  { href: "https://docs.opendsa.vercel.app", label: "Docs", external: true }, // TODO: CHANGE URL TO https://docs.opendsa.dev AFTER DOMAIN IS BOUGHT
+  { href: "https://docs-opendsa.vercel.app", label: "Docs", external: true }, // TODO: CHANGE URL TO https://docs.opendsa.dev AFTER DOMAIN IS BOUGHT
 ];
 
 function useGitHubStars() {
@@ -104,7 +104,7 @@ export function Header() {
 
           {/* Launch App CTA */}
           <Link
-            href="https://app.opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
+            href="https://app-opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
             className="flex items-center gap-2 rounded-full bg-[hsl(var(--primary))] px-5 py-2 text-sm font-semibold text-[hsl(var(--primary-foreground))] transition-all hover:opacity-90 glow-sm"
           >
             LAUNCH APP
@@ -162,7 +162,7 @@ export function Header() {
               )}
             </Link>
             <Link
-              href="https://app.opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
+              href="https://app-opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
               className="flex-1 flex items-center justify-center rounded-xl bg-[hsl(var(--primary))] py-3 text-sm font-semibold text-[hsl(var(--primary-foreground))]"
             >
               Launch App

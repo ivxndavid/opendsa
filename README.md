@@ -17,9 +17,9 @@
 <p align="center">
   <a href="https://opendsa.vercel.app">Website</a>
   ·
-  <a href="https://app.opendsa.vercel.app">Launch App</a>
+  <a href="https://app-opendsa.vercel.app">Launch App</a>
   ·
-  <a href="https://docs.opendsa.vercel.app">Documentation</a>
+  <a href="https://docs-opendsa.vercel.app">Documentation</a>
   ·
   <a href="https://discord.gg/mfQvUa2y4r">Discord</a>
 </p>
@@ -83,7 +83,7 @@ OpenDSA makes complex algorithms visual and intuitive.
 
 ### Try Online
 
-Visit [app.opendsa.dev](https://app.opendsa.vercel.app) to start visualizing algorithms immediately - no installation required.
+Visit [app.opendsa.dev](https://app-opendsa.vercel.app) to start visualizing algorithms immediately - no installation required.
 
 ### Run Locally
 
