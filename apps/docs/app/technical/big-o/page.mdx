@@ -1,4 +1,4 @@
-# Big O Notation
+# Big O Notation (Full Content Coming Soon)
 
 Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. In computer science, it is used to classify algorithms according to how their run time or space requirements grow as the input size grows.
 
@@ -32,20 +32,3 @@ graph LR
     B -->|O n^2| F[Slow]
     B -->|O 2^n| G["Unusable for large n"]
 ```
-
-### Complexity Chart
-
-```mermaid
-xychart-beta
-    title "Time Complexity Growth"
-    x-axis "Input Size (n)" [1, 2, 4, 8, 16]
-    y-axis "Operations" 0 --> 300
-    line [1, 1, 1, 1, 1]
-    line [1, 2, 4, 8, 16]
-    line [1, 4, 16, 64, 256]
-```
-<div className="flex gap-4 text-xs justify-center mt-2">
-  <div className="flex items-center gap-1"><div className="w-3 h-3 bg-[hsl(var(--primary))] opacity-50"></div> O(1)</div>
-  <div className="flex items-center gap-1"><div className="w-3 h-3 bg-[hsl(var(--primary))] opacity-75"></div> O(n)</div>
-  <div className="flex items-center gap-1"><div className="w-3 h-3 bg-[hsl(var(--primary))]"></div> O(n²)</div>
-</div>

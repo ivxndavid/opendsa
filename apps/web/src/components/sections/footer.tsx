@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Twitter, Heart } from "lucide-react";
+import { Github, Twitter, Heart, MessagesSquare } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -9,18 +9,18 @@ const footerLinks = {
   product: [
     { label: "Features", href: "#features" },
     { label: "Roadmap", href: "#roadmap" },
-    { label: "Launch App", href: "https://app.opendsa.dev" },
+    { label: "Launch App", href: "https://app.opendsa.vercel.app" }, // TODO: change to https://app.opendsa.dev
   ],
   resources: [
-    { label: "Documentation", href: "https://docs.opendsa.dev" },
-    { label: "Contributing", href: "https://github.com/soloshun/opendsa/blob/main/CONTRIBUTING.md" },
+    { label: "Documentation", href: "https://docs.opendsa.vercel.app" }, // TODO: change to https://docs.opendsa.dev
+    { label: "Contributing", href: "https://docs.opendsa.vercel.app/contributing" }, // TODO: change to https://docs.opendsa.dev/contributing
     { label: "Changelog", href: "https://github.com/soloshun/opendsa/releases" },
   ],
   community: [
     { label: "GitHub", href: "https://github.com/soloshun/opendsa" },
-    { label: "Discord", href: "#" },
+    { label: "Discord", href: "https://discord.gg/mfQvUa2y4r" },
     { label: "Twitter", href: "#" },
-    { label: "Support Us ☕", href: "https://docs.opendsa.dev/sponsors" },
+    { label: "Support Us ☕", href: "https://docs.opendsa.vercel.app/sponsors" }, // TODO: change to 
   ],
 };
 
@@ -89,6 +89,12 @@ export function Footer() {
               >
                 <Twitter className="h-4 w-4" />
               </Link>
+              <Link
+                href="https://discord.gg/mfQvUa2y4r"
+                className="flex h-10 w-10 items-center justify-center rounded-xl bg-[hsl(var(--secondary))] text-[hsl(var(--muted-foreground))] transition-all hover:text-[hsl(var(--foreground))] hover:bg-[hsl(var(--primary))]/10 hover:border-[hsl(var(--primary))]/30 border border-transparent"
+              >
+                <MessagesSquare className="h-4 w-4" />
+              </Link>
             </div>
           </div>
 
@@ -155,7 +161,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-2 text-sm text-[hsl(var(--muted-foreground))]">
             <span>Made with</span>
-            <Heart className="h-4 w-4 text-red-500 fill-red-500" />
+            <Heart className="h-4 w-4 text-green-500 fill-green-500" />
             <span>by</span>
             <Link
               href="https://github.com/soloshun"

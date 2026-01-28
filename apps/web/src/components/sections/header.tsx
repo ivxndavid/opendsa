@@ -14,7 +14,7 @@ const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#roadmap", label: "Roadmap" },
   // { href: "#open-source", label: "Open Source" },
-  { href: "https://docs.opendsa.dev", label: "Docs", external: true },
+  { href: "https://docs.opendsa.vercel.app", label: "Docs", external: true }, // TODO: CHANGE URL TO https://docs.opendsa.dev AFTER DOMAIN IS BOUGHT
 ];
 
 export function Header() {
@@ -72,12 +72,12 @@ export function Header() {
           >
             <Github className="h-4 w-4" />
             <span>Star</span>
-            <span className="text-[hsl(var(--muted-foreground))]">0</span>
+            {/* <span className="text-[hsl(var(--muted-foreground))]">0</span> TODO: Add star count */}
           </Link>
 
           {/* Launch App CTA */}
           <Link
-            href="https://app.opendsa.dev"
+            href="https://app.opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
             className="flex items-center gap-2 rounded-full bg-[hsl(var(--primary))] px-5 py-2 text-sm font-semibold text-[hsl(var(--primary-foreground))] transition-all hover:opacity-90 glow-sm"
           >
             LAUNCH APP
@@ -130,7 +130,7 @@ export function Header() {
               GitHub
             </Link>
             <Link
-              href="https://app.opendsa.dev"
+              href="https://app.opendsa.vercel.app" // TODO: CHANGE URL TO https://app.opendsa.dev AFTER DOMAIN IS BOUGHT
               className="flex-1 flex items-center justify-center rounded-xl bg-[hsl(var(--primary))] py-3 text-sm font-semibold text-[hsl(var(--primary-foreground))]"
             >
               Launch App

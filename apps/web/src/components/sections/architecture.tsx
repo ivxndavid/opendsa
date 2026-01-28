@@ -71,7 +71,7 @@ export function Architecture() {
       {/* Background */}
       <div className="absolute inset-0 bg-[hsl(var(--background))]" />
       <div className="absolute inset-0 grid-pattern opacity-30" />
-      
+
       {/* Noise overlay */}
       <div className="noise absolute inset-0">
         <div className="absolute inset-0" />
@@ -151,11 +151,10 @@ export function Architecture() {
                     <button
                       key={tab.name}
                       onClick={() => setActiveTab(index)}
-                      className={`px-3 py-1 rounded-md text-xs font-mono transition-all ${
-                        activeTab === index
-                          ? "bg-[hsl(var(--secondary))] text-[hsl(var(--primary))]"
-                          : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))]"
-                      }`}
+                      className={`px-3 py-1 rounded-md text-xs font-mono transition-all ${activeTab === index
+                        ? "bg-[hsl(var(--secondary))] text-[hsl(var(--primary))]"
+                        : "text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--foreground))]"
+                        }`}
                     >
                       {tab.name}
                     </button>
@@ -218,28 +217,27 @@ export function Architecture() {
               <span className="mono-label text-xs">/ Plugin Registration Flow</span>
               <div className="h-px w-16 bg-gradient-to-r from-[hsl(var(--border))] to-transparent" />
             </div>
-            <div className="flex gap-2">
+            {/* TODO: Disable here for now */}
+            {/* <div className="flex gap-2">
               <button
                 onClick={() => setShowDiagram(false)}
-                className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all ${
-                  !showDiagram
-                    ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]"
-                    : "bg-[hsl(var(--secondary))] text-[hsl(var(--muted-foreground))]"
-                }`}
+                className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all ${!showDiagram
+                  ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]"
+                  : "bg-[hsl(var(--secondary))] text-[hsl(var(--muted-foreground))]"
+                  }`}
               >
                 Linear
               </button>
               <button
                 onClick={() => setShowDiagram(true)}
-                className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all ${
-                  showDiagram
-                    ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]"
-                    : "bg-[hsl(var(--secondary))] text-[hsl(var(--muted-foreground))]"
-                }`}
+                className={`px-3 py-1.5 rounded-md text-xs font-mono transition-all ${showDiagram
+                  ? "bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))]"
+                  : "bg-[hsl(var(--secondary))] text-[hsl(var(--muted-foreground))]"
+                  }`}
               >
                 Diagram
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Flow visualization */}
@@ -263,15 +261,14 @@ export function Architecture() {
                       <motion.div
                         animate={{
                           scale: activeFlowStep === index ? 1.05 : 1,
-                          borderColor: activeFlowStep === index 
-                            ? "hsl(142 71% 45%)" 
+                          borderColor: activeFlowStep === index
+                            ? "hsl(142 71% 45%)"
                             : "hsl(var(--border))",
                         }}
-                        className={`relative px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 transition-all ${
-                          activeFlowStep === index
-                            ? "bg-[hsl(var(--primary))]/10"
-                            : "bg-[hsl(var(--secondary))]"
-                        }`}
+                        className={`relative px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 transition-all ${activeFlowStep === index
+                          ? "bg-[hsl(var(--primary))]/10"
+                          : "bg-[hsl(var(--secondary))]"
+                          }`}
                       >
                         {activeFlowStep === index && (
                           <motion.div
@@ -280,11 +277,10 @@ export function Architecture() {
                             transition={{ type: "spring", stiffness: 300, damping: 30 }}
                           />
                         )}
-                        <span className={`relative z-10 text-[10px] sm:text-xs font-mono ${
-                          activeFlowStep === index
-                            ? "text-[hsl(var(--primary))] font-semibold"
-                            : "text-[hsl(var(--muted-foreground))]"
-                        }`}>
+                        <span className={`relative z-10 text-[10px] sm:text-xs font-mono ${activeFlowStep === index
+                          ? "text-[hsl(var(--primary))] font-semibold"
+                          : "text-[hsl(var(--muted-foreground))]"
+                          }`}>
                           {step.label}
                         </span>
                       </motion.div>

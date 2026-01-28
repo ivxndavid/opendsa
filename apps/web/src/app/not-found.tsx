@@ -190,8 +190,7 @@ export default function NotFound() {
             <GlitchText text="PAGE NOT FOUND" />
           </h2>
           <p className="text-sm text-[hsl(var(--muted-foreground))] max-w-md mx-auto">
-            The algorithm you&apos;re searching for doesn&apos;t exist in our registry.
-            Perhaps it&apos;s still being visualized somewhere in the void.
+            Looks like you&apos;ve ventured into uncharted territory. The page you&apos;re looking for doesn&apos;t exist or has been moved.
           </p>
         </motion.div>
 
@@ -227,14 +226,14 @@ export default function NotFound() {
           className="mt-10 flex flex-wrap items-center justify-center gap-6 text-sm"
         >
           <Link
-            href="https://app.opendsa.dev"
+            href="https://app.opendsa.vercel.app"
             className="flex items-center gap-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
           >
             <Globe className="h-4 w-4" />
             Launch App
           </Link>
           <Link
-            href="https://docs.opendsa.dev"
+            href="https://docs.opendsa.vercel.app"
             className="flex items-center gap-2 text-[hsl(var(--muted-foreground))] hover:text-[hsl(var(--primary))] transition-colors"
           >
             <BookOpen className="h-4 w-4" />

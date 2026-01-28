@@ -198,7 +198,8 @@ export default function NotFound() {
             maxWidth: "400px",
             margin: "0 auto"
           }}>
-            Looks like you&apos;ve ventured into uncharted territory. The page you&apos;re looking for doesn&apos;t exist or has been moved.
+           The algorithm or page you&apos;re searching for doesn&apos;t exist in our registry.
+           Perhaps it&apos;s still being visualized somewhere in the void.
           </p>
         </div>
 
@@ -269,10 +270,10 @@ export default function NotFound() {
           fontFamily: "var(--font-jetbrains), monospace",
           color: "hsl(0 0% 60%)"
         }}>
-          <Link href="https://opendsa.dev" style={{ color: "inherit", textDecoration: "none" }}>
+          <Link href="https://opendsa.vercel.app" style={{ color: "inherit", textDecoration: "none" }}>
             → website
           </Link>
-          <Link href="https://docs.opendsa.dev" style={{ color: "inherit", textDecoration: "none" }}>
+          <Link href="https://docs.opendsa.vercel.app" style={{ color: "inherit", textDecoration: "none" }}>
             → docs
           </Link>
           <Link href="https://github.com/soloshun/opendsa" style={{ color: "inherit", textDecoration: "none" }}>

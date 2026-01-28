@@ -20,12 +20,12 @@ const faqItems: FAQItem[] = [
   {
     id: "0x02",
     question: "WHAT ALGORITHMS ARE SUPPORTED?",
-    answer: "We support sorting algorithms (bubble, quick, merge, heap, insertion, selection), searching (binary, linear), graph algorithms (BFS, DFS, Dijkstra's), and tree operations (BST, AVL). More are being added regularly.",
+    answer: "We support all forms of algorithms including sorting algorithms (bubble, quick, merge, heap, insertion, selection), searching (binary, linear), graph algorithms (BFS, DFS, Dijkstra's), tree operations (BST, AVL), ML & DL algorithms, Maths, Physics and more. More are being added regularly.",
   },
   {
     id: "0x03",
     question: "CAN I CONTRIBUTE NEW ALGORITHMS?",
-    answer: "Absolutely! We welcome contributions. Check our CONTRIBUTING.md guide on GitHub to get started. Each visualizer is a modular plugin, making it easy to add new ones.",
+    answer: "Absolutely! We welcome contributions. Check our CONTRIBUTING.md guide on GitHub or documentation website at https://docs.opendsa.vercel.app/ to get started. Each visualizer is a modular plugin, making it easy to add new ones.",
   },
   {
     id: "0x04",
@@ -100,16 +100,16 @@ export function FAQ() {
                   Still have questions?
                 </p>
                 <Link
-                  href="https://github.com/soloshun/opendsa/discussions"
+                  href="https://discord.gg/mfQvUa2y4r"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 text-sm font-semibold text-[hsl(var(--primary))] hover:underline"
                 >
-                  JOIN DISCUSSIONS
+                  JOIN COMMUNITY
                   <ChevronRight className="h-4 w-4" />
                 </Link>
                 <p className="mt-3 text-xs text-[hsl(var(--muted-foreground))] font-mono">
-                  github.com/soloshun/opendsa
+                  <a href="https://github.com/soloshun/opendsa/discussions"> github.com/.../.../discussions</a>
                 </p>
               </div>
             </motion.div>

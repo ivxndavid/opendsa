@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OpenDSA - Coming Soon",
     description: "The open-source algorithm visualization platform is under development.",
-    url: "https://app.opendsa.dev",
+    url: "https://app.opendsa.vercel.app",
     siteName: "OpenDSA",
     type: "website",
   },

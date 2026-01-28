@@ -999,7 +999,7 @@ Join our Discord server for:
 - Showing off your contributions
 - Connecting with other contributors
 
-[Join Discord⛓️‍💥❌](https://discord.gg/opendsa)
+[Join Discord](https://discord.gg/mfQvUa2y4r)
 
 ### Getting Help
 
